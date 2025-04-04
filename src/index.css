@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "tailwindcss";
+
+@theme{
+    --color-gray-white: #fff;
+	--color-gray-50: #f0f1f3;
+	--color-gray-100: #e6e8eb;
+	--color-gray-200: #c3c7ce;
+	--color-gray-300: #a5acb5;
+	--color-gray-400: #87909d;
+	--color-gray-500: #697484;
+	--color-gray-600: #556070;
+	--color-gray-700: #424e60;
+	--color-gray-800: #2b384c;
+	--color-gray-900: #132238;
+	--color-primary-100: #edd8ff;
+	--color-primary-200: #dbb1ff;
+	--color-primary-300: #c98bff;
+	--color-primary-400: #b764ff;
+	--color-primary-500: #a53dff;
+	--color-primary-600: #8431cc;
+	--color-primary-700: #632599;
+	--color-primary-800: #421866;
+	--color-primary-900: #210c33;
+    --font-family: "Work Sans", sans-serif;
+    --second-family: "Poppins", sans-serif;
+}
+body{
+    font-family: var(--font-family);
+}
+
+
+.container{
+    @apply m-auto lg:max-w-[1170px] 
+}
+
+
+.btn{
+	@apply  rounded-[4px] inline-block py-3 px-6 bg-primary-500 text-gray-white font-semibold font-[16px] hover:bg-gray-white hover:text-primary-500 duration-200
+}
+
+.shadow-custom{
+	box-shadow: 0 36px 105px 0 rgba(43, 56, 76, 0.1);
+}
+
+.shadow-social{
+	box-shadow: 0 12px 64px 0 rgba(28, 25, 25, 0.12);
+
+}
+
+.portfolio-shadow{
+	box-shadow: 0 12px 64px 0 rgba(28, 25, 25, 0.12);
+}
+
+#blog .swiper{
+	padding-bottom: 45px;
+}
+
+#blog .swiper .swiper-pagination{
+	position: absolute;
+	bottom: 5px;
+
+}
+#blog .swiper .swiper-pagination-bullet{
+	background-color: #404041;
+	border-radius: 100px;
+	transition: 400ms ease-in-out;
+}
+#blog .swiper .swiper-pagination span.swiper-pagination-bullet-active{
+	background-color: var(--color-primary-900);
+	width: 30px;
+	height: 8px;
+	
+	
+}
+
+.portfolio-shadow{
+	box-shadow: 0 12px 64px 0 rgba(28, 25, 25, 0.12);
+	background: var(--gray-white);
+}
+
+.userExp-shadow{
+	box-shadow: 0 32px 96px 0 rgba(28, 25, 25, 0.16);
+	background: var(--gray-white);
+}
+#happyclients .cards .swiper-slide{
+	filter: grayscale(90%);
+}
+#happyclients .cards .swiper-slide.swiper-slide-active{
+	filter: grayscale(0);
+}
+#testimonial .swiper .swiper-pagination{
+	position: absolute;
+	bottom: 110px;
+
+}
+#testimonial .swiper-pagination-bullet{
+	background-color: #404041;
+	border-radius: 100px;
+	transition: 400ms ease-in-out;
+}
+#testimonial .swiper .swiper-pagination span.swiper-pagination-bullet-active{
+	background-color: var(--color-primary-900);
+	width: 30px;
+	height: 8px;
+}
+
+.shadow-projectForm{
+	box-shadow: 0 59px 124px 0 rgba(0, 0, 0, 0.12);
+}
