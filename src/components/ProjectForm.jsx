@@ -75,7 +75,7 @@ const ProjectForm = () => {
     
     return (
         <section id='projectForm'>
-            <div className="container rounded-2xl p-4 grid lg:grid-cols-2 relative z-100 bg-gray-white shadow-projectForm lg:p-[88px]">
+            <div className="container rounded-2xl p-4 grid lg:grid-cols-2 relative z-90 bg-gray-white shadow-projectForm lg:p-[88px]">
                 <div className="details">
                     <Heading className='text-[38px] font-semibold leading-[132%] text-gray-900'>
                     Let’s discuss your Project

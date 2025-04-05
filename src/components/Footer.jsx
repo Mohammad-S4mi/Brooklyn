@@ -1,34 +1,31 @@
 import React from 'react';
+import { NavLink } from 'react-router';
 
 const Footer = () => {
     const menuItems = [
         {
             name: 'Home',
-            link: '#',
+            link: '/',
         },
         {
             name: 'About',
-            link: '#',
+            link: '/about',
         },
         {
             name: 'Process',
-            link: '#',
+            link: '/process',
         },
         {
             name: 'Portfolio',
-            link: '#',
+            link: '/portfolio',
         },
         {
             name: 'Blog',
-            link: '#',
+            link: '/blog',
         },
         {
             name: 'Services',
-            link: '#',
-        },
-        {
-            name: 'Services',
-            link: '#',
+            link: '/service',
         },
     ]
 
@@ -42,7 +39,7 @@ const Footer = () => {
                     <ul className='lg:flex gap-3'>
 
                     {menuItems.map((item , index) => (
-                    <li key={index}><a className='hover:text-primary-500 font-normal text-base leading-[150%] text-gray-50 duration-150 font-[16px] my-2 inline-block leading-[150%] text-white font-medium' href="{item.link}">{item.name}</a></li>
+                    <li key={index}><NavLink className='hover:text-primary-500 font-normal text-base leading-[150%] text-gray-50 duration-150 font-[16px] my-2 inline-block leading-[150%] text-white font-medium' to={item.link}>{item.name}</NavLink></li>
                     ))}
 
                     </ul>

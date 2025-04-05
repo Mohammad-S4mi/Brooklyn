@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { TiThMenu } from "react-icons/ti";
 import PrimaryBtn from './utils/PrimaryBtn';
 import { MdCancel } from "react-icons/md";
+import {  NavLink } from 'react-router';
 
 
 
@@ -10,31 +11,27 @@ const Navbar = () => {
     const menuItems = [
         {
             name: 'Home',
-            link: '#',
+            link: '/',
         },
         {
             name: 'About',
-            link: '#',
+            link: '/about',
         },
         {
             name: 'Process',
-            link: '#',
+            link: '/process',
         },
         {
             name: 'Portfolio',
-            link: '#',
+            link: '/portfolio',
         },
         {
             name: 'Blog',
-            link: '#',
+            link: '/blog',
         },
         {
             name: 'Services',
-            link: '#',
-        },
-        {
-            name: 'Services',
-            link: '#',
+            link: '/service',
         },
     ]
 
@@ -42,7 +39,7 @@ const Navbar = () => {
     const [showMenu, setShowMenu] = useState(false);
 
     return (
-        <nav>
+        <nav id='navbar'>
         <div className='container py-[12px] lg:py-[20px] grid grid-cols-3 gap-4 items-center px-5'>
 
             <div className="logo">
@@ -51,10 +48,10 @@ const Navbar = () => {
 
             {/* MENU */}
 
-            <div className={`menuBar ${!showMenu ? 'invisible opacity-0' : "visible opacity-100"} lg:visible lg:opacity-100 transition-all duration-300 fixed lg:static col-span-2 bg-gray-500/70 inset-0`}>
+            <div className={`menuBar ${!showMenu ? 'invisible opacity-0' : "visible opacity-100"} z-100 lg:visible lg:opacity-100 transition-all duration-300 fixed lg:static col-span-2 bg-gray-500/70 inset-0`}>
 
             
-                <ul className= {`${!showMenu ? 'scale-x-0' : ''} duration-200 origin-left pt-12 lg:pt-0 lg:scale-x-100 lg:flex relative bg-gray-white max-w-[70%] lg:max-w-full h-full lg:h-auto overflow-auto justify-end items-center text-center gap-8`}>
+                <ul className= {`${!showMenu ? 'scale-x-0' : ''} z-100 duration-200 origin-left pt-12 lg:pt-0 lg:scale-x-100 lg:flex relative bg-gray-white max-w-[70%] lg:max-w-full h-full lg:h-auto overflow-auto justify-end items-center text-center gap-8`}>
 
                     
             {/* CANCEL BUTTON */}
@@ -68,12 +65,12 @@ const Navbar = () => {
                 {/* MENU ITEMS */}
                     {menuItems.map((item , index) => (
 
-                        <li key={index}><a className='hover:text-primary-500 duration-150 font-[16px] my-2 inline-block leading-[150%] font-medium' href="{item.link}">{item.name}</a></li>
+                        <li key={index}><NavLink className='navLink hover:text-primary-500 duration-150 font-[16px] my-2 inline-block leading-[150%] font-medium' to={item.link}>{item.name}</NavLink></li>
                         
                         ))}
                     
                     <li>
-                    <PrimaryBtn url='#'>
+                    <PrimaryBtn url='/contact'>
                         Contact
                     </PrimaryBtn>
                     </li>

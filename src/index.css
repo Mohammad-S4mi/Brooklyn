@@ -109,3 +109,9 @@ body{
 .shadow-projectForm{
 	box-shadow: 0 59px 124px 0 rgba(0, 0, 0, 0.12);
 }
+
+#navbar .navLink.active{
+	color: var(--color-primary-500);
+	border-bottom: 2px;
+	border-bottom: 2px solid var(--color-primary-500) ;
+}
